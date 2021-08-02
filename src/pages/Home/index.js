@@ -42,12 +42,16 @@ function Home() {
           );
         }
 
-        return (
-          <Carousel
-            key={categoria.id}
-            category={categoria}
-          />
-        );
+        if (categoria.videos.length > 0) {
+          return (
+            <Carousel
+              key={categoria.id}
+              category={categoria}
+            />
+            
+          )
+        }
+        
       })}
 
       {/* <BannerMain
